@@ -1,0 +1,9 @@
+open|/arcade|
+verifyLocation|*/user/loginForm|
+type|email|test@test.com
+type|password|111111
+clickAndWait|btnLogin|
+verifyTextPresent|退出登录|
+verifyTextPresent|玛丽奥|
+clickAndWait|link=退出登录|
+verifyLocation|*/user/loginForm|
