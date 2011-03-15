@@ -16,4 +16,6 @@ class User {
         nickname(blank:false, nullable:false, length:2..20, unique:true)
         createDate(nullable:false)
     }
+
+    static hasMany = [friends:User]
 }
