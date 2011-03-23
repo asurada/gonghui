@@ -1,0 +1,12 @@
+open|/arcade|
+verifyLocation|*/user/loginForm|
+type|email|test@test.com
+type|password|111111
+clickAndWait|btnLogin|
+verifyElementPresent|update-status|
+
+type|status-update-input|Hello World!|
+click|status-update-submit|
+waitForTextPresent|Hello World!|
+
+open|/arcade/user/logout|

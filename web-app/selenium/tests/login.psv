@@ -1,3 +1,4 @@
+open|/arcade/user/logout|
 open|/arcade|
 verifyLocation|*/user/loginForm|
 type|email|test@test.com
@@ -7,3 +8,4 @@ verifyTextPresent|退出登录|
 verifyTextPresent|玛丽奥|
 clickAndWait|link=退出登录|
 verifyLocation|*/user/loginForm|
+open|/arcade/user/logout|

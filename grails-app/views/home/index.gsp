@@ -13,6 +13,15 @@
   <div>
     <span>玩家社区 - </span><span id="nickname"></span>
     <g:link controller="user" action="logout" title="退出登录">退出登录</g:link>
+    <div id="status-update">
+      <textarea id="status-update-input" cols="50" rows="4">随便说点什么吧。。。</textarea><br>
+      <button id="status-update-submit" onclick="onSubmitStatusUpdate();">发表更新</button>
+    </div>
+    <hr>
+    <button id="update-status" onclick="onUpdateStatus();">更新</button>
+    <ul id="status-list">
+
+    </ul>
   </div>
 </body>
 </html>

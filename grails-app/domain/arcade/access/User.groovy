@@ -1,8 +1,7 @@
 package arcade.access
 
-/**
- * User model.
- */
+import arcade.Status
+
 class User {
 
     String email
@@ -16,4 +15,6 @@ class User {
         nickname(blank:false, nullable:false, length:2..20, unique:true)
         createDate(nullable:false)
     }
+
+    static hasMany = [follows: User, status: Status]
 }
