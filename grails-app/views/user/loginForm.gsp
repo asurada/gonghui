@@ -20,9 +20,9 @@
     <div id="login-form" align="center">
       <g:form controller="user" action="login" method="post">
         <h2>登录</h2>
-        <label>邮箱<input type="text" name="email"></label><br>
-        <label>密码<input type="password" name="password"></label><br>
-        <button id="btnLogin">登录</button>
+        <label>邮箱<input class="textbox"  type="text" name="email"></label><br>
+        <label>密码<input class="textbox"  type="password" name="password"></label><br>
+        <button class="textbox"  id="btnLogin">登录</button>
       </g:form>
     </div>
   </body>

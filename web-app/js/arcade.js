@@ -38,9 +38,20 @@ function onUpdateStatus() {
     }).error(function(){
         alert('error');
     }).success(function(result){
+        console.log(result);
         var ul = $('ul#status-list').empty();
         $.each(result, function(i, item){
-            $('<li>').text(item.content).appendTo(ul);
+            var li = $('<li>');
+            $('<span>').addClass('status-user')
+                       .text("用户ID " + item.user.id)
+                       .appendTo(li);
+            $('<span>').addClass('status-content')
+                       .text(item.content)
+                       .appendTo(li);
+            $('<span>').addClass('status-date')
+                       .text(item.createDate)
+                       .appendTo(li);
+            li.appendTo(ul);
         })
     });
     return false;
