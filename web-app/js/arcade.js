@@ -1,5 +1,6 @@
 function bootstrap(nickname) {
     $('#nickname').text(nickname);
+    onUpdateStatus();
 }
 
 function onSubmitStatusUpdate() {
@@ -7,20 +8,22 @@ function onSubmitStatusUpdate() {
     console.log(status);
     if(status.length < 3){
         alert('留言至少两个字。');
-        return;
+    } else {
+        $.ajax({
+            url: 'status/create',
+            method: 'POST',
+            data: {
+                content: status
+            }
+        }).error(function(jqXHR, textStatus, errorThrown) {
+            alert(textStatus + errorThrown);
+        }).success(function() {
+            $('#status-update-input').val('');
+            onUpdateStatus();
+        });
     }
-    $.ajax({
-        url: 'status/create',
-        method: 'POST',
-        data: {
-            content: status
-        }
-    }).error(function(jqXHR, textStatus, errorThrown) {
-        alert(textStatus + errorThrown);
-    }).success(function() {
-        $('#status-update-input').val('');
-        onUpdateStatus();
-    });
+
+    return false;
 }
 
 function onUpdateStatus() {
@@ -35,10 +38,10 @@ function onUpdateStatus() {
     }).error(function(){
         alert('error');
     }).success(function(result){
-        console.log(result);
         var ul = $('ul#status-list').empty();
         $.each(result, function(i, item){
             $('<li>').text(item.content).appendTo(ul);
         })
     });
+    return false;
 }

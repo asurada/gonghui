@@ -8,5 +8,3 @@ verifyElementPresent|update-status|
 type|status-update-input|Hello World!|
 click|status-update-submit|
 waitForTextPresent|Hello World!|
-
-open|/arcade/user/logout|

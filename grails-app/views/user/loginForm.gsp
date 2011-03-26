@@ -9,13 +9,21 @@
   <head>
     <title>Arcade - 玩家社区</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="${resource(dir:'css',file:'devarts.css')}" />
+    <link rel="shortcut icon" href="${resource(dir:'images',file:'favicon.ico')}" type="image/x-icon" />
   </head>
   <body>
-    <h1>Arcade - 玩家社区</h1>
-    <g:form controller="user" action="login" method="post">
-      <label>邮箱<input type="text" name="email"></label><br>
-      <label>密码<input type="password" name="password"></label><br>
-      <button id="btnLogin">登录</button>
-    </g:form>
+    <h1 class="center-logo">
+      <span>Arcade - 玩家社区</span>
+    </h1>
+    
+    <div id="login-form" align="center">
+      <g:form controller="user" action="login" method="post">
+        <h2>登录</h2>
+        <label>邮箱<input type="text" name="email"></label><br>
+        <label>密码<input type="password" name="password"></label><br>
+        <button id="btnLogin">登录</button>
+      </g:form>
+    </div>
   </body>
 </html>
