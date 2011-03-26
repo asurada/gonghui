@@ -1,0 +1,53 @@
+body { margin:0; color: #999999; font-family: "Verdana", "Microsoft Yahei", "Sans"; }
+h1.center-logo { 
+    text-align: center; margin:10px 0 0 0; padding:0; height:180px;
+    background: url('../images/logo_150.png') center top no-repeat; }
+h1.center-logo span { position: relative; top: 110px; }
+
+h1.home-logo {
+    background:#0099cc; color:#FFF; border-radius: 0 0 10px 10px;
+    text-align: left; margin:0 0 10px 0; padding:0.5em 1em 0.5em 1em;
+    font-size: 28px;
+}
+
+#login-form form {
+    display: inline-block; padding:20px 40px 20px 40px; font-size: 24px; background-color: #99ccff;
+    border-radius: 20px; color: #666; border:solid 1px #DDD;
+}
+#login-form form h2 { text-align: center; margin: 5px; padding:0; }
+#status-update textarea, #status-update button,
+#login-form input, #login-form button {
+    font-size:28px; color: #666; margin:0.5em 0.5em 0em 0.5em; padding: 0.3em; letter-spacing: 2px;
+    border: 1px solid #88BBEE; font-family: "Verdana";
+}
+
+#status-update button,
+#login-form button { padding:0.2em 1em 0.2em 1em; background: #AADDFF; border-radius:10px;}
+
+#body-wrapper { width: 1000px; margin: 0 auto 10px auto; }
+.column { display:table-cell; text-align: left; vertical-align: top;
+          border: solid #efefef 1px; padding:10px;  }
+#column-profile { width:300px; background: #efefef; border-radius: 10px 0 0 10px; }
+#column-content { border-radius: 0 10px 10px 0; }
+#profile { padding:10px; margin:0; }
+#profile #avatar { 
+    display: inline-block; margin-right:10px; width: 100px; height:100px;
+    border: solid 2px #ddd;  border-radius: 5px;
+    background:white url('../images/logo_150.png') center no-repeat; float:left; }
+
+#status-update-input { width:90%; }
+
+#profile #nickname { }
+ul.toolbox { display: block; list-style: none; padding:0; margin: 1em 0 0 0; }
+ul.toolbox li { display: block; }
+
+ul#status-list { list-style:none; padding: 0; margin:1em 0 0 0;}
+ul#status-list li { display: block; margin: 0; padding: 1em;
+                    border-top:solid 1px #efefef;}
+
+.footer { width: 1000px; margin: 20px auto 10px auto;
+          border-top: solid 1px #efefef; text-align: center; }
+.footer ul { padding:0; margin: 1em; list-style: none; }
+.footer ul li { display: inline; margin: 0; padding: 0 1em 0 1em;
+                border-right: solid 1px #ddd; }
+.footer ul li:last-child { border:none !important; }
